@@ -1,3 +1,6 @@
+# Requires one-time setup: repo Settings → Pages → Build and deployment → Source: GitHub Actions.
+# Until that is set, Pages API calls return 404 (including the old configure-pages step).
+
 name: Deploy site to GitHub Pages
 
 on:
@@ -30,9 +33,6 @@ jobs:
           cp index.html styles.css _site/
           cp -r images media _site/
           if [ -f vid.mp4 ]; then cp vid.mp4 _site/; fi
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
