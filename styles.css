@@ -66,6 +66,7 @@ body {
 #services,
 #video,
 #trust,
+#faq,
 #contact,
 #privacy {
   scroll-margin-top: calc(var(--header-h) + 0.75rem);
@@ -577,6 +578,49 @@ body.is-nav-open {
 
 .band__intro--on-dark strong {
   color: var(--text);
+}
+
+.band__intro--faq {
+  margin-bottom: 1.75rem;
+}
+
+.faq-list {
+  margin: 0;
+  max-width: 44rem;
+}
+
+.faq-list__q {
+  margin: 0;
+  padding: 1.35rem 0 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.faq-list__q:first-child {
+  padding-top: 0;
+}
+
+.faq-list__a {
+  margin: 0;
+  padding: 0.65rem 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  border-bottom: 1px solid rgba(64, 191, 255, 0.12);
+  padding-bottom: 1.35rem;
+}
+
+.faq-list__a:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-list__a strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .heading-display {

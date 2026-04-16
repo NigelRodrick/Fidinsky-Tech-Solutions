@@ -31,6 +31,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html styles.css favicon.svg robots.txt sitemap.xml _site/
+          cp FidinskyTsIdxKey2026GitHub.txt _site/
           cp -r images media _site/
           if [ -f vid.mp4 ]; then cp vid.mp4 _site/; fi
 
@@ -46,3 +47,11 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: IndexNow ping (Bing, Yandex, Seznam, etc.)
+        continue-on-error: true
+        run: |
+          sleep 25
+          curl -sS -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{"host":"nigelrodrick.github.io","key":"FidinskyTsIdxKey2026GitHub","keyLocation":"https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/FidinskyTsIdxKey2026GitHub.txt","urlList":["https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/","https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/sitemap.xml"]}'
