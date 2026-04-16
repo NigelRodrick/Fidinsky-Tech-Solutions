@@ -68,25 +68,6 @@
 
   <main id="main" class="page-main">
     <section class="hero-cinematic" id="showcase" aria-labelledby="hero-heading">
-      <div class="hero-cinematic__media">
-        <video
-          class="hero-cinematic__video"
-          id="showcase-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="images/logo.jpeg"
-          aria-hidden="true"
-          tabindex="-1"
-        >
-          <source src="media/fidinsky-showcase.mp4" type="video/mp4" />
-          <source src="media/fidinsky-overview.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-cinematic__scrim" aria-hidden="true"></div>
-        <div class="hero-cinematic__grain" aria-hidden="true"></div>
-      </div>
       <div class="container hero-cinematic__content">
         <p class="hero-kicker">Quality-led delivery · Current-generation technology</p>
         <h1 id="hero-heading" class="hero-title">
@@ -455,24 +436,6 @@
         s.src = "https://plausible.io/js/script.js";
         document.head.appendChild(s);
       }
-    })();
-
-    (function () {
-      var v = document.getElementById("showcase-video");
-      if (!v) return;
-      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-      function apply() {
-        if (reduce.matches) {
-          v.removeAttribute("autoplay");
-          v.pause();
-        } else {
-          v.setAttribute("autoplay", "");
-          var p = v.play();
-          if (p && typeof p.catch === "function") p.catch(function () {});
-        }
-      }
-      apply();
-      reduce.addEventListener("change", apply);
     })();
 
     (function () {
