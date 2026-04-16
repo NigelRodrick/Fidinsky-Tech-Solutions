@@ -656,6 +656,10 @@ body.is-nav-open {
   font-weight: 600;
 }
 
+.text-lead--tight {
+  margin-top: -0.35rem;
+}
+
 .text-muted {
   margin: 0 0 1.25rem;
   color: var(--text-muted);
@@ -757,6 +761,16 @@ body.is-nav-open {
 @media (min-width: 768px) {
   .pillar-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pillar-grid--quad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .pillar-grid--quad {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
