@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Fidinsky Tech Solutions delivers AI, machine learning, custom software, GIS, and ICT services—from strategy through operations—for organizations that need dependable, scalable technology." />
   <meta name="theme-color" content="#020b18" />
+  <link rel="canonical" href="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fidinsky Tech Solutions" />
+  <meta property="og:title" content="Fidinsky Tech Solutions | AI, Software &amp; ICT Services" />
+  <meta property="og:description" content="Fidinsky Tech Solutions delivers AI, machine learning, custom software, GIS, and ICT services—from strategy through operations—for organizations that need dependable, scalable technology." />
+  <meta property="og:url" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/" />
+  <meta property="og:image" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fidinsky Tech Solutions | AI, Software &amp; ICT Services" />
+  <meta name="twitter:description" content="AI, machine learning, custom software, GIS, and ICT services—from strategy through operations." />
+  <meta name="twitter:image" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg" />
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="images/logo.jpeg" />
   <title>Fidinsky Tech Solutions | AI, Software &amp; ICT Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +30,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#main">
-        <img src="images/logo.jpeg" alt="Fidinsky Tech Solutions" class="logo__img" width="220" height="62" decoding="async" />
+        <img src="images/logo.jpeg" alt="Fidinsky Tech Solutions" class="logo__img" width="220" height="62" decoding="async" fetchpriority="high" />
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
@@ -40,6 +53,8 @@
           loop
           playsinline
           preload="auto"
+          aria-hidden="true"
+          tabindex="-1"
         >
           <source src="media/fidinsky-showcase.mp4" type="video/mp4" />
           <source src="media/fidinsky-overview.mp4" type="video/mp4" />
@@ -192,7 +207,7 @@
       <div class="container">
         <h2 id="video-heading" class="heading-section">Corporate overview</h2>
         <div class="video-frame">
-          <video controls playsinline preload="auto" poster="images/logo.jpeg">
+          <video controls playsinline preload="metadata" poster="images/logo.jpeg">
             <source src="vid.mp4" type="video/mp4" />
             <p class="video-fallback">
               Your browser cannot play this video.
@@ -225,6 +240,19 @@
     </div>
   </footer>
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Fidinsky Tech Solutions",
+      "url": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/",
+      "image": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg",
+      "description": "Technology consulting and delivery: artificial intelligence, machine learning, custom software, GIS, and ICT services from strategy through operations.",
+      "telephone": "+263779964877",
+      "areaServed": "Worldwide",
+      "sameAs": ["https://github.com/NigelRodrick/Fidinsky-Tech-Solutions"]
+    }
+  </script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     (function () {
