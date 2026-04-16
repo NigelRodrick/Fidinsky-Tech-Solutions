@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-plausible-domain="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,7 @@
   <meta name="twitter:title" content="Fidinsky Tech Solutions | AI, Software &amp; ICT Services" />
   <meta name="twitter:description" content="AI, machine learning, custom software, GIS, and ICT services—from strategy through operations." />
   <meta name="twitter:image" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="images/logo.jpeg" type="image/jpeg" />
   <link rel="apple-touch-icon" href="images/logo.jpeg" />
   <title>Fidinsky Tech Solutions | AI, Software &amp; ICT Services</title>
@@ -27,12 +28,26 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo" href="#main">
         <img src="images/logo.jpeg" alt="Fidinsky Tech Solutions" class="logo__img" width="220" height="62" decoding="async" fetchpriority="high" />
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span class="nav-toggle__box" aria-hidden="true">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#technology">Capabilities</a>
         <a href="#services">Services</a>
@@ -40,6 +55,7 @@
         <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
   </header>
 
   <main id="main" class="page-main">
@@ -52,12 +68,14 @@
           muted
           loop
           playsinline
-          preload="auto"
+          preload="metadata"
+          poster="images/logo.jpeg"
           aria-hidden="true"
           tabindex="-1"
         >
           <source src="media/fidinsky-showcase.mp4" type="video/mp4" />
           <source src="media/fidinsky-overview.mp4" type="video/mp4" />
+          <source src="vid.mp4" type="video/mp4" />
         </video>
         <div class="hero-cinematic__scrim" aria-hidden="true"></div>
         <div class="hero-cinematic__grain" aria-hidden="true"></div>
@@ -218,6 +236,17 @@
       </div>
     </section>
 
+    <section class="band band--trust" id="trust" aria-label="How we work with clients">
+      <div class="container">
+        <ul class="trust-strip">
+          <li class="trust-strip__item">Independent delivery with clear ownership</li>
+          <li class="trust-strip__item">Documented architecture &amp; handover</li>
+          <li class="trust-strip__item">Security-minded engineering</li>
+          <li class="trust-strip__item">Responsive support cadence</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="band band--cta" id="contact" aria-labelledby="contact-heading">
       <div class="container cta-panel">
         <h2 id="contact-heading" class="heading-display heading-display--on-dark">Business inquiries</h2>
@@ -232,11 +261,29 @@
           >Contact us</a>
       </div>
     </section>
+
+    <section class="band band--privacy" id="privacy" aria-labelledby="privacy-heading">
+      <div class="container band__narrow">
+        <h2 id="privacy-heading" class="heading-section heading-section--footer">Privacy</h2>
+        <p class="text-muted privacy-note">
+          This site loads fonts from Google Fonts. If you visit the public GitHub Pages URL, GitHub may process standard connection data as described in
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub’s privacy statement</a>.
+          We do not run advertising trackers on this page. Optional privacy-friendly analytics can be enabled by setting <code class="privacy-code">data-plausible-domain</code> on the <code class="privacy-code">&lt;html&gt;</code> element to your Plausible domain. Business contact is through the WhatsApp link above.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-simple">
       <p>&copy; <span id="year"></span> Fidinsky Tech Solutions. All rights reserved.</p>
+      <p class="footer-links">
+        <a href="https://github.com/NigelRodrick/Fidinsky-Tech-Solutions" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="footer-links__sep" aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/company/fidinsky-tech-solutions" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="footer-links__sep" aria-hidden="true">·</span>
+        <a href="#privacy">Privacy</a>
+      </p>
     </div>
   </footer>
 
@@ -250,11 +297,26 @@
       "description": "Technology consulting and delivery: artificial intelligence, machine learning, custom software, GIS, and ICT services from strategy through operations.",
       "telephone": "+263779964877",
       "areaServed": "Worldwide",
-      "sameAs": ["https://github.com/NigelRodrick/Fidinsky-Tech-Solutions"]
+      "sameAs": [
+        "https://github.com/NigelRodrick/Fidinsky-Tech-Solutions",
+        "https://www.linkedin.com/company/fidinsky-tech-solutions"
+      ]
     }
   </script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      var domain = document.documentElement.getAttribute("data-plausible-domain");
+      if (domain && domain.trim()) {
+        var s = document.createElement("script");
+        s.defer = true;
+        s.setAttribute("data-domain", domain.trim());
+        s.src = "https://plausible.io/js/script.js";
+        document.head.appendChild(s);
+      }
+    })();
+
     (function () {
       var v = document.getElementById("showcase-video");
       if (!v) return;
@@ -271,6 +333,54 @@
       }
       apply();
       reduce.addEventListener("change", apply);
+    })();
+
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      var nav = document.getElementById("site-nav");
+      var backdrop = document.getElementById("nav-backdrop");
+      var mq = window.matchMedia("(min-width: 881px)");
+      if (!toggle || !nav || !backdrop) return;
+
+      function setOpen(open) {
+        nav.classList.toggle("is-open", open);
+        backdrop.hidden = !open;
+        document.body.classList.toggle("is-nav-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+
+      function closeNav() {
+        setOpen(false);
+      }
+
+      toggle.addEventListener("click", function () {
+        var open = !nav.classList.contains("is-open");
+        setOpen(open);
+        if (open) {
+          var first = nav.querySelector("a");
+          if (first) first.focus();
+        }
+      });
+
+      backdrop.addEventListener("click", closeNav);
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (!mq.matches) closeNav();
+        });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("is-open")) {
+          closeNav();
+          toggle.focus();
+        }
+      });
+
+      mq.addEventListener("change", function () {
+        if (mq.matches) closeNav();
+      });
     })();
   </script>
 </body>
