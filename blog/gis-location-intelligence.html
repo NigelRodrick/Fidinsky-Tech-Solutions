@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-plausible-domain="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GIS and location intelligence: why data models, integrations, and workflows matter beyond the map — from Fidinsky Tech Solutions." />
+  <meta name="theme-color" content="#020b18" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/gis-location-intelligence.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Location intelligence beyond the map tile | Fidinsky Tech Solutions" />
+  <meta property="og:description" content="Maps are the surface. Lasting value comes from data, integrations, and operational workflows." />
+  <meta property="og:url" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/gis-location-intelligence.html" />
+  <meta property="og:image" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <title>Location intelligence beyond the map tile | Fidinsky Tech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">
+        <img src="../images/logo.jpeg" alt="Fidinsky Tech Solutions" class="logo__img" width="220" height="62" decoding="async" />
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span class="nav-toggle__box" aria-hidden="true">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#technology">Capabilities</a>
+        <a href="../index.html#services">Services</a>
+        <a href="./" aria-current="page">Blog</a>
+        <a href="../index.html#video">Video</a>
+        <a href="../index.html#faq">FAQ</a>
+        <a class="nav-cta" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+  </header>
+
+  <main id="main" class="page-main page-blog-main">
+    <article class="container post-article" itemscope itemtype="https://schema.org/BlogPosting">
+      <a class="post-back" href="./">&larr; All posts</a>
+      <header class="post-article__header">
+        <p class="post-article__meta"><time datetime="2026-04-17" itemprop="datePublished">17 April 2026</time> - GIS</p>
+        <h1 class="post-article__title" itemprop="headline">Location intelligence beyond the map tile</h1>
+        <p class="post-article__dek" itemprop="description">
+          A polished web map can still rest on fragile data. Durable geospatial systems treat location as part of your core information architecture, not an afterthought in a single app.
+        </p>
+      </header>
+      <div class="post-prose" itemprop="articleBody">
+        <h2>Start with the data contract</h2>
+        <p>
+          Before styling layers or picking a basemap, clarify <strong>what "truth" means</strong> for your organization: update cadence, authoritative sources, topology rules, and how edits are approved. Without that, every map is a snapshot that drifts from reality.
+        </p>
+        <h2>Integrate with how people work</h2>
+        <p>
+          Field teams, analysts, and customer-facing products rarely want the same view, but they should draw from the <strong>same logical model</strong>. APIs, ETL, and sensible master data practices connect GIS to CRM, asset registers, and operational dashboards so geography reinforces decisions instead of fragmenting them.
+        </p>
+        <p>
+          This is placeholder copy for your first real post. Swap in case studies, diagrams, or links to your services as you see fit.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-simple">
+      <p>&copy; <span id="year"></span> Fidinsky Tech Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Location intelligence beyond the map tile",
+      "description": "Durable geospatial systems treat location as part of your core information architecture.",
+      "datePublished": "2026-04-17",
+      "dateModified": "2026-04-17",
+      "author": {
+        "@type": "Organization",
+        "name": "Fidinsky Tech Solutions"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fidinsky Tech Solutions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/gis-location-intelligence.html"
+      }
+    }
+  </script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      var domain = document.documentElement.getAttribute("data-plausible-domain");
+      if (domain && domain.trim()) {
+        var s = document.createElement("script");
+        s.defer = true;
+        s.setAttribute("data-domain", domain.trim());
+        s.src = "https://plausible.io/js/script.js";
+        document.head.appendChild(s);
+      }
+    })();
+
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      var nav = document.getElementById("site-nav");
+      var backdrop = document.getElementById("nav-backdrop");
+      var mq = window.matchMedia("(min-width: 881px)");
+      if (!toggle || !nav || !backdrop) return;
+
+      function setOpen(open) {
+        nav.classList.toggle("is-open", open);
+        backdrop.hidden = !open;
+        document.body.classList.toggle("is-nav-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+
+      function closeNav() {
+        setOpen(false);
+      }
+
+      toggle.addEventListener("click", function () {
+        var open = !nav.classList.contains("is-open");
+        setOpen(open);
+        if (open) {
+          var first = nav.querySelector("a");
+          if (first) first.focus();
+        }
+      });
+
+      backdrop.addEventListener("click", closeNav);
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (!mq.matches) closeNav();
+        });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("is-open")) {
+          closeNav();
+          toggle.focus();
+        }
+      });
+
+      mq.addEventListener("change", function () {
+        if (mq.matches) closeNav();
+      });
+    })();
+  </script>
+</body>
+</html>

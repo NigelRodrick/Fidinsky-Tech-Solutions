@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-plausible-domain="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Notes on AI, machine learning, GIS, and software delivery from Fidinsky Tech Solutions — practical perspective for quality-focused teams." />
+  <meta name="theme-color" content="#020b18" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Fidinsky Tech Solutions" />
+  <link rel="canonical" href="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="../sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fidinsky Tech Solutions" />
+  <meta property="og:title" content="Blog | Fidinsky Tech Solutions" />
+  <meta property="og:description" content="Articles on AI, ML, GIS, and dependable software delivery." />
+  <meta property="og:url" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/" />
+  <meta property="og:image" content="https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/images/logo.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../images/logo.jpeg" type="image/jpeg" />
+  <title>Blog | Fidinsky Tech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">
+        <img src="../images/logo.jpeg" alt="Fidinsky Tech Solutions" class="logo__img" width="220" height="62" decoding="async" />
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span class="nav-toggle__box" aria-hidden="true">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#technology">Capabilities</a>
+        <a href="../index.html#services">Services</a>
+        <a href="./" aria-current="page">Blog</a>
+        <a href="../index.html#video">Video</a>
+        <a href="../index.html#faq">FAQ</a>
+        <a class="nav-cta" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+  </header>
+
+  <main id="main" class="page-main page-blog-main">
+    <header class="blog-hero">
+      <div class="container">
+        <p class="blog-hero__kicker">Insights - Field notes</p>
+        <h1 class="blog-hero__title">Blog</h1>
+        <p class="blog-hero__deck">
+          Short articles on <strong>artificial intelligence</strong>, <strong>machine learning operations</strong>, <strong>GIS</strong>, and building software that stays reliable after launch. Replace the sample posts below with your own when you are ready.
+        </p>
+      </div>
+    </header>
+
+    <div class="container">
+      <ul class="post-list">
+        <li>
+          <a class="post-card" href="why-quality-mlops-matters.html">
+            <p class="post-card__meta">MLOps - April 2026</p>
+            <h2 class="post-card__title">Why quality MLOps matters before you scale</h2>
+            <p class="post-card__excerpt">Models that work in a notebook are not the same as systems that behave in production. Here is how we think about monitoring, ownership, and keeping ML trustworthy.</p>
+          </a>
+        </li>
+        <li>
+          <a class="post-card" href="gis-location-intelligence.html">
+            <p class="post-card__meta">GIS - April 2026</p>
+            <h2 class="post-card__title">Location intelligence beyond the map tile</h2>
+            <p class="post-card__excerpt">Maps are the surface. Lasting value comes from data models, integrations, and workflows that treat geography as a first-class part of your operations.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-simple">
+      <p>&copy; <span id="year"></span> Fidinsky Tech Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/#blog",
+      "name": "Fidinsky Tech Solutions Blog",
+      "description": "Articles on AI, machine learning, GIS, and software delivery.",
+      "url": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fidinsky Tech Solutions",
+        "url": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Why quality MLOps matters before you scale",
+          "url": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/why-quality-mlops-matters.html"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Location intelligence beyond the map tile",
+          "url": "https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/gis-location-intelligence.html"
+        }
+      ]
+    }
+  </script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      var domain = document.documentElement.getAttribute("data-plausible-domain");
+      if (domain && domain.trim()) {
+        var s = document.createElement("script");
+        s.defer = true;
+        s.setAttribute("data-domain", domain.trim());
+        s.src = "https://plausible.io/js/script.js";
+        document.head.appendChild(s);
+      }
+    })();
+
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      var nav = document.getElementById("site-nav");
+      var backdrop = document.getElementById("nav-backdrop");
+      var mq = window.matchMedia("(min-width: 881px)");
+      if (!toggle || !nav || !backdrop) return;
+
+      function setOpen(open) {
+        nav.classList.toggle("is-open", open);
+        backdrop.hidden = !open;
+        document.body.classList.toggle("is-nav-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+
+      function closeNav() {
+        setOpen(false);
+      }
+
+      toggle.addEventListener("click", function () {
+        var open = !nav.classList.contains("is-open");
+        setOpen(open);
+        if (open) {
+          var first = nav.querySelector("a");
+          if (first) first.focus();
+        }
+      });
+
+      backdrop.addEventListener("click", closeNav);
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (!mq.matches) closeNav();
+        });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("is-open")) {
+          closeNav();
+          toggle.focus();
+        }
+      });
+
+      mq.addEventListener("change", function () {
+        if (mq.matches) closeNav();
+      });
+    })();
+  </script>
+</body>
+</html>

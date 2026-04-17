@@ -5,4 +5,19 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/why-quality-mlops-matters.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nigelrodrick.github.io/Fidinsky-Tech-Solutions/blog/gis-location-intelligence.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
